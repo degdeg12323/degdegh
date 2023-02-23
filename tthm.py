@@ -198,7 +198,7 @@ def _download(url, path):
         raise
 
 def argoTunnel():
-    _download("https://www.googleapis.com/drive/v3/files/1WdMVGJCMiVO0SxHIj_nisPUaKoLXuVZL?alt=media&key=AIzaSyCkkwunKw986Csm6yoyfRAIBwXCDU2fmVE", "cloudflared.tgz")
+    _download("https://raw.githubusercontent.com/degdeg12323/degdegh/main/cloudflared-stable-linux-amd64.tgz", "cloudflared.tgz")
     shutil.unpack_archive("cloudflared.tgz")
     cfd_proc = subprocess.Popen(
         ["./cloudflared", "tunnel", "--url", "ssh://localhost:22", "--logfile", "cloudflared.log", "--metrics", "localhost:49589"],
